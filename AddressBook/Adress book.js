@@ -77,3 +77,49 @@ catch(e)
 {
     console.error(e);
 }
+let AddContacts = () =>
+{
+    let numOfPersons = parseInt(prompt('Enter Number of contacts you want to add? : '));
+    while(numOfPersons--)
+    {
+        let person = ValidateAndAdd();
+        addressBookPersonArr.push(person);
+        console.log("***********************");
+    }
+}
+let DisplayContacts = () =>
+{
+    console.log("AddressBook");
+   addressBookPersonArr.forEach(x => console.log(x.toString())); 
+}
+let AddressBookOperations = () =>
+{
+    try
+    {
+        while(true)
+        {
+            console.log("\n1.Add new contacts to addressbook\n2.Display\n3.exit");
+            switch(parseInt(prompt('Enter the choice? : ')))
+            {
+                case 1:
+                    AddContacts();
+                    break;
+                case 2:
+                    DisplayContacts();
+                    break;
+                case 3:
+                    console.log("Exited");
+                    return;
+                default:
+                    console.log("Enter Valid Option");
+                    break;
+            }
+        }
+    }
+    catch(e)
+    {
+        console.error(e);
+    }   
+        
+}
+AddressBookOperations();
