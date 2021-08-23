@@ -578,7 +578,19 @@ let SortContacts = () =>
         {
             case 1:
                 addressBookPersonArr.sort((a,b) => a.firstName>b.firstName? 1:-1);
-                console.log("***********SORTED************");
+                console.log("SORTED");
+                break;
+            case 2:
+                addressBookPersonArr.sort((a,b) => a.city>b.city? 1:-1);
+                console.log("SORTED");
+                break;
+            case 3:
+                addressBookPersonArr.sort((a,b) => a.state>b.state? 1:-1);
+                console.log("SORTED");
+                break;
+            case 4:
+                addressBookPersonArr.sort((a,b) => a.zipCode>b.zipCode? 1:-1);
+                console.log("SORTED");
                 break;
         }
     
