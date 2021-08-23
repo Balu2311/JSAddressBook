@@ -125,8 +125,10 @@ let ValidateAndAdd = () =>
         while(true)
         {
             var firstName =getName('FirstName');
-            if(firstName!=null)
+            var exists = addressBookPersonArr.filter((x)=>x.firstName==firstName);
+            if(firstName!=null && exists.length==0)
                 break;
+            console.log("First name already present");
         }
         //LastName
         while(true)
